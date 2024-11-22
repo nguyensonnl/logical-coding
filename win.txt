@@ -1,0 +1,17 @@
+Thuật toán
+Cấu trúc dữ liệu
+
+Các thành phần cấu tạo nên chương trình
+Các kỹ thuật về lập trình
+Tư duy lập trình
+
+tư duy code
+tư duy giải quyết vấn đề
+coding mindset
+
+variables
+datatypes
+operators
+control flow
+loops
+function

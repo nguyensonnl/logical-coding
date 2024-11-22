@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Todo List</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="todo">
+        <form class="todo-form">
+          <div class="group">
+            <label>Công việc</label>
+            <input
+              type="text"
+              placeholder="Công việc của bạn..."
+              class="task"
+            />
+            <div class="error"></div>
+          </div>
+          <button type="submit" class="create">Create</button>
+        </form>
+
+        <table>
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Tên công việc</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody class="list-todo"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

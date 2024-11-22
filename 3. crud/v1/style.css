@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eee;
+}
+
+.app {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 100px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+.group label {
+  margin-bottom: 2px;
+}
+
+.group .form-control {
+  border: none;
+  padding: 6px 8px;
+}
+
+.login {
+  border: none;
+  border-radius: 5px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
