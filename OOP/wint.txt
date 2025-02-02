@@ -1,0 +1,10 @@
+object oriented programming
+1. Kế thừa
+2. Trừu tượng
+3. Đa hình
+4. Đóng gói
+object
+class: property, method
+constructor
+getter, setter
+abstract, interface
