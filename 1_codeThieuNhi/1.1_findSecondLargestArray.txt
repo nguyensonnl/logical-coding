@@ -1,0 +1,12 @@
+#1. using sort method
+let arr = [1,4,3,5,3];
+arr.sort((a,b) => b - a;
+let first = arr[0];
+let second = null;
+for(let i = 0; i<arr.lenght; i++){
+if(arr[i] > first){
+second = arr[i];
+break;
+}
+}
+console.log(res !== null  ? res : "No second largest in array"
