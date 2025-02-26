@@ -1,17 +1,17 @@
 //Tìm phần tử nhỏ nhất hay lớn nhất đưa về đúng vị trí của nó
 
 function selectionSort(arr) {
-  let n = arr.length;
-
-  for (let i = 0; i < n; i++) {
+  for (let i = 0; i < arr.length; i++) {
     let min = i;
-    for (let j = i + 1; j < n; j++) {
-      if (arr[j] > arr[min]) {
+
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[min]) {
         min = j;
       }
     }
     [arr[i], arr[min]] = [arr[min], arr[i]];
   }
-  return arr;
+  console.log(arr);
 }
-console.log(selectionSort([5, 4, 7, 6, 3, 2]));
+const array = [4, 3, 8, 7, 3];
+selectionSort(array);
