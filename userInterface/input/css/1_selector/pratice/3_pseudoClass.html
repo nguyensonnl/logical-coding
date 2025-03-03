@@ -1,0 +1,29 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pseudo classes</title>
+    <style>
+      p {
+        display: none;
+        background-color: yellow;
+        color: red;
+        padding: 20px;
+      }
+      div:hover p {
+        display: block;
+      }
+      div:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <app>
+      <div>
+        Hover here
+        <p>Hello world</p>
+      </div>
+    </app>
+  </body>
+</html>

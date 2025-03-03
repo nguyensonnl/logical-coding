@@ -1,0 +1,20 @@
+1. descendant: space
+div p{
+    background-color: yellow;
+    color: red;
+}
+
+2. child: >
+div > p{
+    background-color: yellow;
+}
+
+3. next sibling: +
+div + p{
+    background-color: yellow;
+}
+
+4. subsequent-sibling: ~
+div ~ p{
+    background-color: yellow;
+}

@@ -1,0 +1,13 @@
+selector:pseudo-class{
+    property: value;
+}
+
+note:
+1. hover after link, visited
+2. active after hover
+
+#pseduo-class:
+1. link
+2. visited
+3. hover
+4. active

@@ -1,0 +1,7 @@
+1. [attribute]
+2. [attribute="value"]
+3. [attribute~="value"]
+4. [attribute|="value"]
+5. [attribute^="value"]
+6. [attribute$="value"]
+7. [attribute*="value"]
