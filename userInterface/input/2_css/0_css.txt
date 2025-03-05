@@ -1,0 +1,12 @@
+#syntax
+selector {
+attribute: value;
+}
+
+#embed css in html
+1. inline style
+2. external style
+3. <style></style>
+
+#units
+#colors

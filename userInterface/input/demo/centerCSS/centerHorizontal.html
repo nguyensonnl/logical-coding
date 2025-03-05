@@ -1,0 +1,56 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>center horizontal</title>
+    <!--
+    #text-algin: center;
+     1. phần tử block: div, p, h1: căn giưa nội dung bên trong chúng (hình ảnh, văn bản, và các phần tử khác)
+     theo chiều ngang
+     2. phần tử văn bản: căn giữa nội dung văn bản theo chiều ngang
+     3. phẩn tử nội dung: không trực tiếp căn giữa các phần tử inline(span, a), nhưng nếu chúng năm trong
+     element block thì chúng cũng sẽ được căn theo chiều ngang
+     4. các phần tử <table> và các phần tử có display: inline-block cung hoạt động tương tự như block
+
+    #margin: 0 auto
+    có widht: xác định rõ ràng
+    -->
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .app {
+        background-color: red;
+      }
+      .center1 {
+        text-align: center;
+      }
+
+      .center2 {
+        width: 500px;
+        margin: 0 auto;
+      }
+
+      .center3 {
+        width: 500px;
+      }
+      p {
+        position: absolute;
+        left: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <div class="center1">center1</div>
+      <div class="center2">center2</div>
+      <div class="center3">
+        <p>Center3</p>
+      </div>
+    </div>
+  </body>
+</html>

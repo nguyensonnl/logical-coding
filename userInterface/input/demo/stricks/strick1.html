@@ -1,0 +1,38 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>strick1</title>
+    <style>
+      h4 {
+        background-color: #2c98f0;
+        color: #fff;
+        display: inline-block;
+        font-weight: 500;
+        line-height: 1.1em;
+        margin-bottom: 1.5rem;
+        padding: 10px 20px;
+        position: relative;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+        text-transform: uppercase;
+      }
+      h4::after {
+        border-bottom: 10px solid transparent;
+        border-right: 10px solid #2c98f0;
+        bottom: -10px;
+        content: "";
+        display: block;
+        height: 0;
+        /* left: 0; */
+        left: -10px;
+        position: absolute;
+        width: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <h4>Đầu mục bài viết</h4>
+    </div>
+  </body>
+</html>

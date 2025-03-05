@@ -1,0 +1,4 @@
+1. style in tag attribute (1000)
+2. id selector (100)
+3. class selector(10)
+4. tag selector(1)
