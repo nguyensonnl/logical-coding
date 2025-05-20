@@ -1,0 +1,98 @@
+Backend (Node.js + Express + MongoDB)
+We’ll implement an API where tasks are added to a queue and processed one at a time asynchronously.
+
+1. Install Dependencies
+sh
+npm install express mongoose
+2. Create the Queue Model
+javascript
+const mongoose = require("mongoose");
+
+const taskSchema = new mongoose.Schema({
+    name: String,
+    status: { type: String, default: "pending" },
+});
+
+const Task = mongoose.model("Task", taskSchema);
+module.exports = Task;
+3. Task Queue Implementation
+javascript
+const express = require("express");
+const mongoose = require("mongoose");
+const Task = require("./models/task");
+
+const app = express();
+app.use(express.json());
+
+mongoose.connect("mongodb://localhost:27017/taskQueueDB");
+
+let processing = false;
+
+// Add Task to Queue
+app.post("/tasks", async (req, res) => {
+    const task = new Task({ name: req.body.name });
+    await task.save();
+    processNext();
+    res.json({ message: "Task added!", task });
+});
+
+// Process Tasks One by One
+async function processNext() {
+    if (processing) return;
+    processing = true;
+
+    const task = await Task.findOne({ status: "pending" });
+    if (!task) {
+        processing = false;
+        return;
+    }
+
+    console.log(`Processing task: ${task.name}`);
+
+    setTimeout(async () => {
+        task.status = "completed";
+        await task.save();
+        console.log(`Task Completed: ${task.name}`);
+        processing = false;
+        processNext(); // Process next task in queue
+    }, 2000); // Simulating async work (2-sec delay)
+}
+
+// Get All Tasks
+app.get("/tasks", async (req, res) => {
+    const tasks = await Task.find();
+    res.json(tasks);
+});
+
+app.listen(3000, () => console.log("Server running on port 3000"));
+Frontend (React) Example
+We can call the API from React using fetch to add tasks and view queued processing.
+
+1. Add Task to Queue
+javascript
+const addTask = async (name) => {
+    await fetch("http://localhost:3000/tasks", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name }),
+    });
+};
+2. Fetch Task List
+javascript
+const fetchTasks = async () => {
+    const response = await fetch("http://localhost:3000/tasks");
+    const tasks = await response.json();
+    console.log(tasks);
+};
+How This Works
+Tasks are added via API (POST /tasks).
+
+Tasks are processed one by one in sequence (processNext()).
+
+MongoDB updates the task status (completed).
+
+The queue continues processing automatically until all tasks are done.
+
+This ensures async tasks execute in order, preventing simultaneous execution issues. 🚀
+
+Would you like a more advanced version with WebSockets for live updates? I can make it even cooler! 😎
