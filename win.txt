@@ -1,0 +1,7 @@
+design pattern
+logic business
+Số lượng còn 1 sản phẩm trong kho, khi 2 user cùng đặt hàng thì sẽ giải quyết như thế nào?
+
+functional
+oop
+procedural
