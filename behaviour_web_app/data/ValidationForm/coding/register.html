@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validation Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Validation Form</h1>
+      <form>
+        <div class="form-group">
+          <input type="text" class="name" name="name" placeholder="Enter your name" />
+          <div class="error-message"></div>
+        </div>
+        <div class="form-group">
+          <input type="email" class="email" name="email" placeholder="Enter you email" />
+          <div class="error-message"></div>
+        </div>
+        <div class="form-group">
+          <input type="password" class="password" name="password" placeholder="Enter your password" />
+          <div class="error-message"></div>
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            class="confirm-password"
+            name="confirm-password"
+            compare="password"
+            placeholder="Enter your confirm password"
+          />
+          <div class="error-message"></div>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn-register">Submit</button>
+        </div>
+      </form>
+    </div>
+    <!-- <script src="./1_intern.js"></script> -->
+    <script src="./2_fresher.js"></script>
+  </body>
+</html>

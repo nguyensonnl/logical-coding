@@ -1,0 +1,63 @@
+phân tích tài liệu validate cho phần register
+
+phân tích yêu cầu bài toán cho trước (input)
+
+Đây là yêu cầu cho validate trường nhập thông tin name
+- tên không được để trống
+
+Đây là yêu cầu cho validate trường nhập thông tin email
+- email không được để trống
+- email phải ít nhất 3 ký tự
+- email phải đúng định dạng email
+
+Đây là yêu cầu cho validate trường nhập thông tin password
+- password không được để trống
+- password phải có ít nhất 8 ký tự bảo mật
+
+Đây là yêu cầu cho validate trường nhập thông tin confirm password
+- confirm password không được để trống
+- confirm password có ít nhất 8 ký tự
+- confirm password phải giống với giá trị password
+
+
+Bài toán cần được giải quyết (output)
+Hiển thị lỗi validate cho từng ô input
+Khi tất cả input hợp lệ thì sẽ submit form
+Thêm các sự kiện khác nhau để hiển thị lôi tốt cho trải nghiệm người dùng (phần phụ)
+
+const rules = {
+    name: required,
+    email: required | minlength:3 | email,
+    password: required | minlength:8,
+    confirm_password: required | minlength:8 | same_pass: password
+}
+
+
+để validate 1 ô input bất kì -> cần lấy ra ô input -> lấy ra value của ô input
+1. chuẩn hóa dữ liệu
+const rules = {
+    name: {
+        required: true ->call hàm ->trả về true nếu dữ liệu hợp lệ, trả về false nếu dữ liệu không hợp lệ,
+        
+    },
+    email: {
+        required: true,
+        minLength: 3,
+    },
+    password: {
+        required: true,
+        minLength: 8
+    },
+    confirm_password{
+        required: true,
+        minLength:8,
+        equal_to: password
+    }
+}
+
+xử lý tuần tự if else, if else if rất nhiều
+tránh sử dụng if else quá nhiều
+
+tạo ra input, xác định dữ liệu vào
+tập trung chủ yếu vào object và array
+tập trung vào dữ liệu, xử lý dữ liệu

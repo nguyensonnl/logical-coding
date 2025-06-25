@@ -1,0 +1,23 @@
+source: codelove youtube
+
+tư duy hướng thủ tục:
+tuần tự các công việc nhưng có thể viết trong 1 hầm
+tư duy hàm
+tư duy hướng đối tượng
+
+tư duy fresher:
+chủ yếu sử dụng if else
+sử dụng hàm rất ít
+Nhược điểm: code giống nhau, lặp lại rất nhiếu
+
+tư duy hướng hàm
+sử dụng vòng lặp
+tách hàm khi lặp lại nhiều
+
+tư duy hướng đối tượng
+sử dụng ở nhiều nới
+vd: login, thêm danh mục, thêm sản phẩm....
+->viết 1 lần sử dụng nhiều lần
+
+
+if else rất nhiều ->duplicate(trùng lặp) ->dùng vòng lặp for
